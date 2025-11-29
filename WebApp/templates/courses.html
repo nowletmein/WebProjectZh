@@ -13,10 +13,13 @@
             <tr>
                   <td>{{course.code}}</td>
                   <td>{{course.name}}</td>
-                  <td>
+                  <!--<td>
                         {% for student in course.students %}
                               {{student.name}} <br>
                         {% endfor %}
+                  </td>!-->
+                  <td> 
+                        <a href="/students/{{ course.code }}" target="_blank">View Students API</a>
                   </td>
             </tr>
       {% endfor %}

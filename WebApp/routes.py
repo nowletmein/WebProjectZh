@@ -76,5 +76,11 @@ def order():
 
 
 ### Write your solution here!
-
+@app.route('/students/<course_code>') # type: ignore
+def get_students(course_code):
+    course = coursesDB.query.filter_by(code=course_code).first()
+    if not course:
+        return jsonify({'error': 'Course not found'}), 404
+    student = [{'name': student.name, 'neptun': student.neptun} for student in course.students]
+    return jsonify(student)
 ###
