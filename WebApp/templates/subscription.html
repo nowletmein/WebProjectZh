@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h3>Subscription</h3>
+    <form action="" method="post" novalidate>
+        <!-- Write your solution here!-->
+        {{form.hidden_tag()}}
+        <p>
+            {{form.courseCode.label}} <br>
+            {{form.courseCode(size = 32)}} <br>
+        </p>
+        <p>
+              {{form.neptun.label}} <br>
+              {{form.neptun(size = 6)}} <br>
+        </p>
+        <p>
+            {{form.name.label}}  <br>
+            {{form.name(size = 32)}}  <br>
+        </p>
+        <p>
+            {{form.iamhuman.label}} {{form.iamhuman()}}
+        </p>
+        <p>
+             {{form.submit()}}  <br>
+        </p>
+    </form>
+        <!---->
+    
+
+{% endblock %}
